@@ -1,0 +1,24 @@
+#################################################################
+#                  *S C R I P T    M I N D S*                   #
+#################################################################
+
+
+
+
+
+
+#################################################################
+#TestOptimization
+
+
+import nuke
+from TestOptimization import clear_temp_files # Import the function from TestOptimization.py
+
+# Define the icon path
+Logo = "C:/Program Files/Nuke14.0v1/plugins/icons/Scriptminds_ICON.png"
+
+# Create the main ScriptMinds menu with an icon
+scriptminds_menu = nuke.menu('Nuke').addMenu('ScriptMinds', icon=Logo)
+
+# Add the "Find Directory" command under the ScriptMinds menu
+scriptminds_menu.addCommand('ScriptMinds/Test Optimization', clear_temp_files, 'Alt+Ctrl+T')
